@@ -21,7 +21,8 @@ trait ForTenants
 		static::addGlobalScope(
             new TenantScope($manager->getTenant())
 		);
-        /* TenantObserver class-г дуудаж оруулж ирж байна*/
+        /* апп методоор TenantObserver class-г дуудаж оруулж ирж байна
+        ингэснээр модел дээр шууд ачааллах боломжтой болж байна*/
 		static::observe(
            app(TenantObserver::class)
 		);

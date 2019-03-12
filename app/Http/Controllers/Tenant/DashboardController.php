@@ -12,6 +12,7 @@ class DashboardController extends Controller
     public function index()
     {
     	$projects = Project::all();
+    
     	return view('tenant.dashboard', compact('projects'));
     }
 }

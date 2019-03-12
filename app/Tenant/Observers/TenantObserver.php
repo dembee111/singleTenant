@@ -20,14 +20,14 @@ class TenantObserver
 
 	public function creating(Model $model)
 	{
-        /* хэрвээ энэ дээд байгуулагч функцын парам дээр утга тавьбал
-        ажиллаж tenant property-c object-н getForeignKey функц ашиглаж
+        /* tenant property-c object-н getForeignKey функц ашиглаж
         компани айдиг авч байна */
 		$foreignKey = $this->tenant->getForeignKey();
 
 
         /*хэрвээ гадаад кей байхгүй байвал */
 		if (!isset($model->{$foreignKey})) {
+			/*гадаад кей оронд тенант айдиг модель руу тавьж байна*/
 			$model->setAttribute($foreignKey, $this->tenant->id);
 		}
 	}

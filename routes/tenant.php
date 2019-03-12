@@ -1,5 +1,5 @@
 <?php 
-
+    
 
     Route::get('/{company}', 'DashboardController@index');
     

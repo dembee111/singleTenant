@@ -15,8 +15,9 @@ class Config
      */
     public function handle($request, Closure $next)
     {
+        /* tenant() method oor tenant medeelliig awj bna*/
         $tenant = $request->tenant();
-
+        // awsan medeellee app.name luu onooj bna
         config()->set('app.name', $tenant->name);
         
         return $next($request);

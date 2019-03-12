@@ -39,7 +39,8 @@ class AppServiceProvider extends ServiceProvider
          $this->app->singleton(TenantObserver::class, function(){
             return new TenantObserver(app(Manager::class)->getTenant());
         });
-         
+         /* middleware deer getTenant aar tenant object utga awhad zoriulj tenant()
+         macrobale beldej bna*/
          Request::macro('tenant', function(){
              return app(Manager::class)->getTenant();
          });

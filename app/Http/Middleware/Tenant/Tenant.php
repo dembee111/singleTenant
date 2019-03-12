@@ -18,7 +18,7 @@ class Tenant
     public function handle($request, Closure $next)
     {
         /* resolveTenant -г дуудаад request company байвал 
-        параметр дээр нь аргутент болгож тавина байхгүй бол session -с 
+        параметр дээр нь аргуmент болгож тавина байхгүй бол session -с 
         tenant авч тавина энэ үед компани id олно*/
 
         $tenant = $this->resolveTenant(
